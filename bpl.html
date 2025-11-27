@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <script>
+    alert(" Selamat datang BLINK! ");
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLACKPINK Member </title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fce4ec;
+      overflow-x: hidden;
+      animation: fadeInBody 2s ease-in-out;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* HEADER */
+    header {
+      background-color: #000;
+      color: pink;
+      padding: 40px 20px;
+      text-align: center;
+      animation: bounceHeader 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes bounceHeader {
+      from { transform: scale(1); }
+      to { transform: scale(1.03); }
+    }
+
+    /* NAV */
+    nav {
+      background-color: #fff;
+      text-align: center;
+      padding: 15px;
+      animation: slideInNav 1.5s ease-out;
+    }
+
+    @keyframes slideInNav {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: #d81b60;
+      font-weight: bold;
+      transition: 0.4s;
+    }
+
+    nav a:hover {
+      color: #ad1457;
+      transform: scale(1.2) rotate(3deg);
+      text-shadow: 0 0 10px pink;
+    }
+
+    /* DROPDOWN */
+    .dropdown {
+      display: inline-block;
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 160px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      z-index: 1;
+      text-align: left;
+      animation: fadeInDropdown 0.6s ease-in-out;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 15px;
+      color: #d81b60;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f8bbd0;
+      color: #880e4f;
+      transform: translateX(5px);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    @keyframes fadeInDropdown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* MAIN CONTENT */
+    main {
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeInMain 2s ease-in-out;
+    }
+
+    @keyframes fadeInMain {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    main h2 {
+      color: #d81b60;
+      font-size: 2em;
+      margin-bottom: 10px;
+      animation: pulseText 2s infinite alternate;
+    }
+
+    @keyframes pulseText {
+      from { text-shadow: 0 0 5px pink; }
+      to { text-shadow: 0 0 20px #ff66b2; }
+    }
+
+    .member-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .member-card {
+      background-color: white;
+      border: 3px solid #ffc1e3;
+      border-radius: 12px;
+      width: 220px;
+      padding: 20px;
+      transition: 0.4s;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      animation: floatCard 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatCard {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
+
+    .member-card:hover {
+      transform: scale(1.1) rotate(2deg);
+      box-shadow: 0 0 25px rgba(255, 105, 180, 0.8);
+    }
+
+    .member-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .member-card h3 {
+      margin: 10px 0 5px;
+      color: #c2185b;
+      animation: glowText 2s infinite alternate;
+    }
+
+    @keyframes glowText {
+      from { text-shadow: 0 0 5px pink; }
+      to { text-shadow: 0 0 15px #ff80ab; }
+    }
+
+    .member-card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #ec407a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 50px;
+      animation: fadeInFooter 2s ease-in;
+    }
+
+    @keyframes fadeInFooter {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer span {
+      color: #ff66b2;
+      font-weight: bold;
+      text-shadow: 0 0 10px #ff99cc, 0 0 20px #ff66b2;
+      animation: blinkGlow 1.5s infinite alternate;
+    }
+
+    @keyframes blinkGlow {
+      from { text-shadow: 0 0 10px #ff66b2; opacity: 1; }
+      to { text-shadow: 0 0 25px #ff1493; opacity: 0.8; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1> WELCOME TO BLACKPINK WEBSITE </h1>
+    <p> Kenali Lisa, Jennie, Jisoo, dan Rosé lebih dekat! </p>
+  </header>
+
+  <nav>
+    <a href="bp.html"> BLACKPINK</a>
+    <div class="dropdown">
+      <a href="#"> ANGGOTA</a>
+      <div class="dropdown-content">
+        <a href="lisaa.html"> Lisa</a>
+        <a href="jeni.html"> Jennie</a>
+        <a href="jiso.html"> Jisoo</a>
+        <a href="rosee.html"> Rosé</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#"> TOKO</a>
+      <div class="dropdown-content">
+        <a href="tiket konser.html"> Tiket Konser</a>
+        <a href="lightstick.html"> Lightstick</a>
+        <a href="mechandise.html"> Merchandise</a>
+        <a href="album.html"> Album</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <h2> Hallo, BLINK! </h2>
+    <p>Website ini dibuat untuk memberikan informasi lengkap tentang para member BLACKPINK. </p>
+
+    <div class="member-list">
+      <div class="member-card">
+          <img src="c:\Users\Thinkpad\Documents\web\lisaawal.png" alt="Lisa">
+          <h3>  Lisa</h3>
+          <p>Rapper dan dancer dari Thailand. Enerjik dan ikonik! </p>
+        </a>
+      </div>
+      <div class="member-card">
+          <img src="c:\Users\Thinkpad\Documents\web\jeniawal.png" alt="Jennie">
+          <h3> Jennie</h3>
+          <p>Rapper utama dengan gaya fashion yang luar biasa. </p>
+        </a>
+      </div>
+      <div class="member-card">
+          <img src="c:\Users\Thinkpad\Documents\web\jisoawal.png" alt="Jisoo">
+          <h3> Jisoo</h3>
+          <p>Visual BLACKPINK dan aktris berbakat dari Korea Selatan. </p>
+        </a>
+      </div>
+      <div class="member-card">
+          <img src="c:\Users\Thinkpad\Documents\web\roseawal.png" alt="Rosé">
+          <h3> Rosé</h3>
+          <p>Vokalis utama dengan suara emosional dan khas. </p>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p> &copy; 2025 Fansite BLACKPINK | Dibuat oleh <span>Giovanni </span> </p>
+  </footer>
+
+</body>
+</html>
